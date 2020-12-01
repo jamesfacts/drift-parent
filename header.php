@@ -294,11 +294,6 @@ div[data-wpfs-amount-row="custom-amount"] {
 	max-width: 900px;
 }
 
-@media(min-width: 1000px) and (max-width: 1250px) {
-
-
-}
-
 @media(min-width: 768px) and (max-width: 1250px) {
 	.footer_inner {
 		padding: 200px 10px 10px 10px;
@@ -333,10 +328,7 @@ div[data-wpfs-amount-row="custom-amount"] {
 .f_logo img { 
 	width: 200px;
 }
-@media (max-width: 1023px) {
 
-
-}
 @media (max-width: 823px) {
 	#other_amount, #other_amount_temp {
         position: static !important;
@@ -446,7 +438,19 @@ div[data-wpfs-amount-row="custom-amount"] {
 	<div class="desktop_new_menu">
 		<div class="desktop-logo">
             <a href="<?php echo home_url(); ?>">
-                <img src="<?php echo $logo; ?>">
+				<picture>
+					<source
+					media="(min-width: 1024px)"
+					srcset="
+						<?php echo get_theme_file_uri() . '/assets/images/drift_logo_large_1x.png'; ?> 1x, 
+						<?php echo get_theme_file_uri() . '/assets/images/drift_logo_large_2x.png'; ?> 2x, 
+						<?php echo get_theme_file_uri() . '/assets/images/drift_logo_large_3x.png'; ?> 3x"
+					type="image/png" >
+					<img
+					src="<?php _($logo) ?>"
+					type="image/png"
+					alt="The Drift Magazine">
+				</picture>
             </a> 
         </div>
 	  <?php 
@@ -459,7 +463,20 @@ div[data-wpfs-amount-row="custom-amount"] {
         <div class="container">
             <div class="td-mobile-logo">
                 <a href="<?php echo home_url(); ?>">
-                    <img src="<?php echo $logo; ?>">
+
+					<picture>
+						<source
+						media="(max-width: 1023px)"
+						srcset="
+							<?php echo get_theme_file_uri() . '/assets/images/drift_logo_mobile_1x.png'; ?> 1x, 
+							<?php echo get_theme_file_uri() . '/assets/images/drift_logo_mobile_2x.png'; ?> 2x, 
+							<?php echo get_theme_file_uri() . '/assets/images/drift_logo_mobile_3x.png'; ?> 3x"
+						type="image/png" >
+						<img
+						src="<?php _($logo) ?>"
+						type="image/png"
+						alt="The Drift Magazine">
+					</picture>
                 </a> 
             </div>
             <div class="td-mobile-menus">
