@@ -1079,7 +1079,8 @@ ul.social_icons li  i.fab{
     margin: 0 !important;
     background: transparent !important;
     color: #636363 !important;
-    padding: 0 50px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
     border: 1px solid !important;
     border-radius: 9px !important;
     font-family: proxy-nova;
@@ -1368,6 +1369,10 @@ button.search-submit:hover {
 
 .only_mobile_show {display: none; }
 
+.footerNew_middle {
+    padding-left: 40px;
+    padding-right: 40px;
+}
 
 }
 @media(max-width: 1023px) {
@@ -2592,7 +2597,7 @@ h1.issue_heading span { 	/* ============= ADDED 5/28 ========= */
         width: 150px !important;
         max-width: 100%;
     }
-    .footerNewLogo img{ width: 85%; }
+    /* .footerNewLogo img{ width: 85%; } */
   }
 
  @media (max-width: 1199px) {
