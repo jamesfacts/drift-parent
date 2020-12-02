@@ -35,7 +35,19 @@ if($logo_url == "")
 	<div class="signup4mail_BG">
 		<div class="row ">
 				<div class="col-md-2 footerNewLogo">
-					<img src="<?php echo $logo; ?>">
+					<picture>
+						<source
+						media="(min-width: 1010px)"
+						srcset="
+							<?php echo get_theme_file_uri() . '/assets/images/drift_logo_large_1x.png'; ?> 1x, 
+							<?php echo get_theme_file_uri() . '/assets/images/drift_logo_large_2x.png'; ?> 2x, 
+							<?php echo get_theme_file_uri() . '/assets/images/drift_logo_large_3x.png'; ?> 3x"
+						type="image/png" >
+						<img
+						src="<?php _($logo) ?>"
+						type="image/png"
+						alt="The Drift Magazine">
+					</picture>
 				</div>
 				<div class="col-md-8 footerNew_middle">
 					<div class="footerNew_middle_inner">
@@ -119,7 +131,7 @@ if($logo_url == "")
 	   	?>
 	   </div>
 	   <div class="col-md-3 copyrightDiv">
-	   	   <span class="copyrightSpan">Copyright (c) The Drift <?php echo date('Y'); ?></span>
+	   	   <span class="copyrightSpan">Copyright &copy; The Drift <?php echo date('Y'); ?></span>
 	   </div>
     </div>
 </div>
