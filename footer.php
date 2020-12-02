@@ -389,14 +389,14 @@ jQuery("#mc-embedded-subscribe").on("click", function(){
 
 </script>
 <script type="text/javascript">
-	function openMobileNav() {
-	  document.getElementById("myMobileNav").style.height = "100%";
-	}
+	const elementClicked = document.querySelector(".openMobMenuIcon");
+	const elementYouWantToShow = document.querySelector("#myMobileNav");
 
-	function closeMobileNav() {
-	  document.getElementById("myMobileNav").style.height = "0%";
-	}
+	elementClicked.addEventListener('click', ()=>{
+	elementYouWantToShow.classList.toggle('main-nav-open');
+	});
 </script>
+
 <script>
 jQuery(document).ready(function(e){
 	jQuery(".openMobMenuIcon").on("click", function(){

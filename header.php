@@ -487,7 +487,7 @@ div[data-wpfs-amount-row="custom-amount"] {
             </div>
             <div class="drift_searchForm" style="display: none;"><?php echo get_search_form();?></div>
             <div id="myMobileNav" class="td-overlay-box">
-              <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a>
+              <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a> -->
               <div class="td-overlay-content">
                 <?php 
                     wp_nav_menu( array(

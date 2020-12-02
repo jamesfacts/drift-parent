@@ -1,3 +1,11 @@
+/* James Changes */
+
+form.search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.7rem;
+}
+
 *, *:focus {
     outline: none;
 }
@@ -1292,7 +1300,70 @@ display: none;
     width: 75px;
     display: inline-block;
 }
+
 /* media css*/
+
+/* James Zone */
+
+input[id*='search-form'] {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-right: 1rem;
+}
+
+button.search-submit {
+    background-color: white;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    transition: all 0.23s ease-in-out 0s;
+    color: #aaa;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: normal;
+    height: 32px;
+    font-family: sans-serif;
+    line-height: 32px;
+    padding: 0 22px;
+    text-align: center;
+    text-decoration: none;
+}
+
+button.search-submit:hover {
+    background-color: #CBCBCB !important;
+    color: #000 !important;
+    border: 1px solid black;
+}
+
+.openMobMenuIcon {
+    cursor: pointer;
+}
+
+.td-overlay-box {
+    height: 0% !important;
+}
+
+.td-overlay-box.main-nav-open {
+    height: 100% !important;
+}
+
+.td-overlay-box.mob_menu_open {
+    border-top: 1px solid #efefef;
+}
+
+#myMobileNav {
+    overflow-y: hidden;
+}
+
+
+@media (min-width: 515px) {
+    input[id*='search-form'] {
+        width: 50%;
+        max-width: 500px;
+    }
+}
+
+
 @media(min-width: 768px){
 
 .only_mobile_show {display: none; }
@@ -2826,9 +2897,7 @@ h1.issue_heading span { 	/* ============= ADDED 5/28 ========= */
         bottom: -57px !important;
         top: unset !important;
     }
-    .td-overlay-box.mob_menu_open {
-        border-top: 1px solid #efefef;
-    }
+
     #tf-hide-mob {
         display: none;
     }
