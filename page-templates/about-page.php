@@ -164,7 +164,7 @@ else
 						
 					</div>
 					<div class="about_r submit_heading">
-						<h3> 
+						<h3 id="contact"> 
 							<?php if($a_heading != ""){?><b> <?php echo $a_heading; ?> </b> <?php } ?> 
 							<?php if($about_subtitle != ""){ echo "<span class='submit_span'>|</span> ".$about_subtitle; } ?> 
 						</h3>
