@@ -4,7 +4,8 @@ $pageID = get_the_id();
 $page_imageID = get_post_thumbnail_id($pageID);
 
 $captionArray = wp_get_attachment_metadata($pageID);
-
+$category = get_the_category(); 
+$issue_no = $category[0]->name . '&nbsp;';
 
 if($page_imageID != "")
 {
@@ -325,9 +326,7 @@ else
 				}
 ?>
                  <div class="postDate mobile_version">
-					<b class="issue_title"><?php 				
-					
-                     echo get_the_title(); ?> <span>|<span></b>
+					<b class="issue_title"><?php echo $issue_no; ?>	<span>|</span></b>
 					    <?php echo $articleDate; 
 
 					    wp_reset_postdata();
@@ -406,12 +405,8 @@ else
 ?>
 <!-- COPIED fROM ABOVE-->
 				<div class="postDate desktop_version">
-				<b class="issue_title"><?php 				
-					wp_reset_query();
-					wp_reset_postdata();
-					$category = get_the_category(); 
-                    echo $catename = $category[0]->name;
-                    ?></b> |
+				
+				<b class="issue_title"><?php echo $issue_no; ?></b> |
 					    <?php echo $articleDate; ?>
 				</div>
 
@@ -502,14 +497,11 @@ else
 				}
 
 				?>
+				<?php //this section is different for some reason in poems? ?>
+				
 				<div class="postDate desktop_version">
 					<b class="issue_title">
-						<?php 						    
-						    wp_reset_postdata();
-						    wp_reset_query();
-						    $category = get_the_category(); 
-                            echo $catename = $category[0]->name;
-						?>							
+						<?php echo $issue_no; ?>							
 						</b> 
 					<span class="single_article_pipe" style="color:#ccc;">|</span> 
 					<?php echo $articleDate; ?>    
