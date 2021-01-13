@@ -1,4 +1,4 @@
-<?php 
+<?php
 global $theme_option;
   $logo_url = $theme_option["logo_image"];
   $logo = $logo_url["url"];
@@ -6,29 +6,26 @@ global $theme_option;
   $site_description = $theme_option["site_description"];
 
 
-if($logo_url == "")
-{
-	$logo = get_bloginfo()."/assets/images/f-loog.png";
+if ($logo_url == "") {
+    $logo = get_bloginfo()."/assets/images/f-loog.png";
 }
 
-	$facebook_url = $theme_option["facebook_url"];
-	$twitter_url = $theme_option["twitter_url"];
-	$instagram_url = $theme_option["instagram_url"];
+    $facebook_url = $theme_option["facebook_url"];
+    $twitter_url = $theme_option["twitter_url"];
+    $instagram_url = $theme_option["instagram_url"];
 
-	$youtube_url = $theme_option["youtube_url"];
-	$linkedin_url = $theme_option["linkedin_url"];
-	$pinterest_url = $theme_option["pinterest_url"];
-	$gplus_url = $theme_option["gplus_url"];
+    $youtube_url = $theme_option["youtube_url"];
+    $linkedin_url = $theme_option["linkedin_url"];
+    $pinterest_url = $theme_option["pinterest_url"];
+    $gplus_url = $theme_option["gplus_url"];
 
-	$pageID = get_the_id();
+    $pageID = get_the_id();
 ?> 
-<?php 
- if(true){
-
-   $footer_style = get_post_meta($pageID, "footer_style", true);
-		if($footer_style == "" || $footer_style == "Style-1")
-		{
-		?>
+<?php
+ if (true) {
+     $footer_style = get_post_meta($pageID, "footer_style", true);
+     if ($footer_style == "" || $footer_style == "Style-1") {
+         ?>
 
 
 <div class="signup4mail mt_wrap footer_style_new">
@@ -89,31 +86,31 @@ if($logo_url == "")
 				<div class="col-md-2 footerNewSocials">
 					
 		                  <ul class="social_icons">
-							<?php if($facebook_url != ""){?>
+							<?php if ($facebook_url != "") {?>
 								  	<li><a href="<?php echo $facebook_url; ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 								<?php } ?>
 								
-								<?php if($twitter_url != ""){?>
+								<?php if ($twitter_url != "") {?>
 								  	<li><a href="<?php echo $twitter_url; ?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
 								<?php } ?>
 								
-								<?php if($instagram_url != ""){?>
+								<?php if ($instagram_url != "") {?>
 								  	<li><a href="<?php echo $instagram_url; ?>" target="_blank"><i class="fab fa-instagram"></i></a></li>
 								<?php } ?>
 								
-								<?php if($youtube_url != ""){?>
+								<?php if ($youtube_url != "") {?>
 								  	<li><a href="<?php echo $youtube_url; ?>" target="_blank"><i class="fab fa-youtube"></i></a></li>
 								<?php } ?>
 								
-								<?php if($linkedin_url != ""){?>
+								<?php if ($linkedin_url != "") {?>
 								  	<li><a href="<?php echo $linkedin_url; ?>" target="_blank"><i class="fab fa-linkedin"></i></a></li>
 								<?php } ?>
 								
-								<?php if($pinterest_url != ""){?>
+								<?php if ($pinterest_url != "") {?>
 								  	<li><a href="<?php echo $pinterest_url; ?>" target="_blank"><i class="fab fa-pinterest"></i></a></li>
 								<?php } ?>
 								
-								<?php if($gplus_url != ""){?>
+								<?php if ($gplus_url != "") {?>
 								  	<li><a href="<?php echo $gplus_url; ?>" target="_blank"><i class="fab fa-google-plus-square"></i></a></li>
 								<?php } ?>
 					   </ul>
@@ -126,9 +123,8 @@ if($logo_url == "")
 <div class="footerFullMenu ">
 	<div class="row">
 	   <div class="col-md-9 footerFullMenu">
-	   	<?php 
-	   	  wp_nav_menu(array("menu" => "Footer Full Menu", "container" => "", "menu_id" => "footerFullMenu"));
-	   	?>
+	   	<?php
+          wp_nav_menu(array("menu" => "Footer Full Menu", "container" => "", "menu_id" => "footerFullMenu")); ?>
 	   </div>
 	   <div class="col-md-3 copyrightDiv">
 	   	   <span class="copyrightSpan">Copyright &copy; The Drift <?php echo date('Y'); ?></span>
@@ -138,12 +134,8 @@ if($logo_url == "")
 
 
 		<?php
-		}
-		else if($footer_style == "Style-2")
-		{
-		
-		
-?>
+     } elseif ($footer_style == "Style-2") {
+         ?>
 <!-- footer Footer Container
 ================================================== -->
 <section class="footer_outer">
@@ -152,19 +144,16 @@ if($logo_url == "")
 		<div class="footer_inner">
 		<div class="f_logo">
 			<img src="<?php echo $logo; ?>">
-			<?php 
-			  if($site_description != "")
-			  {
-			  	echo "<p>".nl2br($site_description)."</p>";
-			  }
-			?>			
+			<?php
+              if ($site_description != "") {
+                  echo "<p>".nl2br($site_description)."</p>";
+              } ?>			
 		</div>
 
-		<?php 
-		 $pageID = get_the_id();
-		 if($pageID != 51)
-		 {
-		?>	
+		<?php
+         $pageID = get_the_id();
+         if ($pageID != 51) {
+             ?>	
 
 		<div class="sig_up">
 			<div class="sig_up_inner">
@@ -198,41 +187,41 @@ if($logo_url == "")
 
 			</div>
 		</div>
-<?php } ?>
+<?php
+         } ?>
 
 		<div class="f_three d-flex ">
 
-				<?php 
-				$pageID = get_the_id();
-				    wp_nav_menu(array("menu" => "Footer menu", "container" => "", "menu_class" => "d-flex f_menu nav" ));
-				?>
+				<?php
+                $pageID = get_the_id();
+         wp_nav_menu(array("menu" => "Footer menu", "container" => "", "menu_class" => "d-flex f_menu nav" )); ?>
 
 				<ul class="social_icons">
-					<?php if($facebook_url != ""){?>
+					<?php if ($facebook_url != "") {?>
 						  	<li><a href="<?php echo $facebook_url; ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
 						<?php } ?>
 						
-						<?php if($twitter_url != ""){?>
+						<?php if ($twitter_url != "") {?>
 						  	<li><a href="<?php echo $twitter_url; ?>" target="_blank"><i class="fab fa-twitter"></i></a></li>
 						<?php } ?>
 						
-						<?php if($instagram_url != ""){?>
+						<?php if ($instagram_url != "") {?>
 						  	<li><a href="<?php echo $instagram_url; ?>" target="_blank"><i class="fab fa-instagram"></i></a></li>
 						<?php } ?>
 						
-						<?php if($youtube_url != ""){?>
+						<?php if ($youtube_url != "") {?>
 						  	<li><a href="<?php echo $youtube_url; ?>" target="_blank"><i class="fab fa-youtube"></i></a></li>
 						<?php } ?>
 						
-						<?php if($linkedin_url != ""){?>
+						<?php if ($linkedin_url != "") {?>
 						  	<li><a href="<?php echo $linkedin_url; ?>" target="_blank"><i class="fab fa-linkedin"></i></a></li>
 						<?php } ?>
 						
-						<?php if($pinterest_url != ""){?>
+						<?php if ($pinterest_url != "") {?>
 						  	<li><a href="<?php echo $pinterest_url; ?>" target="_blank"><i class="fab fa-pinterest"></i></a></li>
 						<?php } ?>
 						
-						<?php if($gplus_url != ""){?>
+						<?php if ($gplus_url != "") {?>
 						  	<li><a href="<?php echo $gplus_url; ?>" target="_blank"><i class="fab fa-google-plus-square"></i></a></li>
 						<?php } ?>
 			   </ul>
@@ -242,7 +231,9 @@ if($logo_url == "")
 	</div>
 </section>
 
-<?php  } } ?>
+<?php
+     }
+ } ?>
 </div>
 <!-- End Footer Container
 ================================================== -->
