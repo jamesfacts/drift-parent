@@ -10,7 +10,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<section class="log-in-alert not-logged-in">
-			<p>Thank you for subscribing. <a href="<?php echo home_url('/issues/'); ?>">Read our latest issue here</a>.</p>
+			<p style="margin-bottom: 0;">Thank you for subscribing. <a href="<?php echo home_url('/issues/'); ?>">Read our latest issue here</a>.</p>
 		</section>
 
 			<?php
@@ -26,7 +26,6 @@ get_header(); ?>
 
             endwhile; // End the loop.
             ?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .wrap -->
@@ -37,10 +36,13 @@ get_header(); ?>
 		max-width: 480px;
 		margin-left: auto;
 		margin-right: auto;
-
+		transition: 0.2s ease;
+		background-color: aliceblue;
+		padding: 1rem;
+		margin-bottom: 3rem;
 	}
 
-	.log-in-alert .not-logged-in {
+	.log-in-alert.not-logged-in {
 		display: none;
 	}
 </style>
@@ -49,9 +51,12 @@ get_header(); ?>
  
 	jQuery(document).ready(function(){ 
 
-		if( ('#wpfs-manage-subscriptions-container').length > 1 ) {
-			jQuery('.log-in-alert').toggleClass('not-logged-in');
-		}
+		setTimeout(() =>
+		{
+			if( jQuery('#wpfs-manage-subscriptions-container').length > 0 ) {
+				jQuery('.log-in-alert').removeClass('not-logged-in');
+			}
+		}, 2000);
 	});
 
 
