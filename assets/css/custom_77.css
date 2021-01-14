@@ -1308,6 +1308,23 @@ display: none;
 
 /* James Zone */
 
+.account-managment .wpfs-form-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.account-managment .wpfs-form-actions .wpfs-btn-primary {
+    margin-left: 0;
+    margin-right: auto !important;
+}
+
+.account-managment .wpfs-form-actions .wpfs-nav-back-to-email-address {
+    margin-top: 1rem;
+    display: block;
+    margin-left: 0;
+    margin-right: auto !important;
+}
+
 input[id*='search-form'] {
     border: none;
     border-bottom: 1px solid black;
