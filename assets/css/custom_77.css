@@ -331,6 +331,11 @@ input[type="email"].wpfs-form-control, input[type="text"].wpfs-form-control, .wp
 .signup4mail_Right #mc_embed_signup {
     margin-top: 20px;
 }
+
+.footerNew_middle_inner #mc_embed_signup {
+    z-index: 5;
+}
+
 .signup4mail_Right .news_l input {
     width: 100% !important;
 }
