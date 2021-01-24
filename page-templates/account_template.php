@@ -9,10 +9,6 @@ get_header(); ?>
 	<div id="primary" class="content-area account-managment">
 		<main id="main" class="site-main" role="main">
 
-		<section class="log-in-alert not-logged-in">
-			<p style="margin-bottom: 0;">Thank you for subscribing. <a href="<?php echo home_url('/issues/'); ?>">Read our latest issue here</a>.</p>
-		</section>
-
 			<?php
             while (have_posts()) :
                 the_post(); ?>
@@ -20,6 +16,10 @@ get_header(); ?>
 				<header class="entry-header">
 					<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 					<?php twentyseventeen_edit_link(get_the_ID()); ?>
+					
+					<section class="log-in-alert not-logged-in">
+						<p style="margin-bottom: 0;">Thank you for subscribing. <a href="<?php echo home_url('/issues/'); ?>">Read our latest issue here</a>.</p>
+					</section>
 				</header><!-- .entry-header -->
 				<div class="entry-content">
 					<?php
@@ -45,6 +45,17 @@ get_header(); ?>
 
 <style type="text/css">
 
+	.entry-header {
+		max-width: 480px;
+		margin-left: auto;
+		margin-right: auto;	
+		margin-top: 4rem;
+	}
+
+	.entry-content {
+		margin-bottom: 8rem;
+	}
+
 	.log-in-alert {
 		max-width: 480px;
 		margin-left: auto;
@@ -59,17 +70,50 @@ get_header(); ?>
 		display: none;
 	}
 
-	.account-page {
+	article.account-page {
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
 
-	.account-page .entry-title {
+	article.account-page .entry-title {
 		padding-left: 1rem;
 		font-family: 'Adobe-Caslon';
 		font-weight: bolder;
 		margin-bottom: 2rem;
-	}	
+	}
+	
+	.wpfs-form-title,
+	.wpfs-form-description,
+	.wpfs-form-lead,
+	.wpfs-form-subtitle,
+	.wpfs-credit-card-name,
+	.wpfs-credit-card-expires,
+	.wpfs-btn-link--bold {
+		font-family: Avenir-Next-Thin !important;
+	}
+
+	.wpfs-invoice-icon {
+		display: none;
+	}
+
+	#wpfs-subscriptions-actions {
+		display: none;
+	}
+
+	#wpfs-anchor-logout,
+	#wpfs-anchor-discard-card-changes {
+		display: block;
+		text-align: left;
+		margin-top: 1rem;
+		width: 100%;
+	}
+
+	@media (min-width: 1024px) {
+		article.account-page .entry-title {
+			padding-left: 0;
+		}	
+	}
+
 </style>
 
 <script type="text/javascript"> 
