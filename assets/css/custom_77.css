@@ -1330,6 +1330,27 @@ display: none;
     margin-right: auto !important;
 }
 
+span.author_desc a{
+    color: #68b3cc;
+}
+    
+.page .entry-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.page .wpfs-form-actions {
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+#wpfs-enter-email-address-form,
+#wpfs-enter-security-code-form{
+    height: 100vh;
+    max-height: 420px;
+}
+
+
 input[id*='search-form'] {
     border: none;
     border-bottom: 1px solid black;
@@ -1359,6 +1380,8 @@ button.search-submit:hover {
     color: #000 !important;
     border: 1px solid black;
 }
+
+
 
 .openMobMenuIcon {
     cursor: pointer;
