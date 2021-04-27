@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<?php 
-   global $theme_option; 
+<?php
+   global $theme_option;
    $favicon = $theme_option["favicon"]["url"];
 ?>
 <link rel="icon" href="<?php echo $favicon; ?>" type="image/gif" sizes="64x64">
@@ -42,20 +42,20 @@
 
 <body <?php echo body_class(); ?>>
 
-<?php 
+<?php
   global $theme_option;
   $issue_color = $theme_option["issue_color"];
 
 
 
-	$facebook_url = $theme_option["facebook_url"];
-	$twitter_url = $theme_option["twitter_url"];
-	$instagram_url = $theme_option["instagram_url"];
+    $facebook_url = $theme_option["facebook_url"];
+    $twitter_url = $theme_option["twitter_url"];
+    $instagram_url = $theme_option["instagram_url"];
 
-	$youtube_url = $theme_option["youtube_url"];
-	$linkedin_url = $theme_option["linkedin_url"];
-	$pinterest_url = $theme_option["pinterest_url"];
-	$gplus_url = $theme_option["gplus_url"];
+    $youtube_url = $theme_option["youtube_url"];
+    $linkedin_url = $theme_option["linkedin_url"];
+    $pinterest_url = $theme_option["pinterest_url"];
+    $gplus_url = $theme_option["gplus_url"];
 
 
 
@@ -329,6 +329,34 @@ div[data-wpfs-amount-row="custom-amount"] {
 	width: 200px;
 }
 
+@media print {
+	.hed-wrap,
+	.td-site-mobile-header,
+	.more_from_issue,
+	.footer_style_new,
+	.footerFullMenu {
+		display: none;
+	}
+
+	.container.no-print {
+		display: none !important;
+		height: 1px !important;
+	}
+
+	.no-print .td-mobile-logo,
+	.no-print .td-mobile-menus {
+		display: none !important;
+	}
+
+	section.mission_outer {
+		margin-bottom: 6rem;
+	}
+
+	.mission_outer > .container-fluid {
+		padding-bottom: 10rem;
+	}
+}
+
 @media (max-width: 823px) {
 	#other_amount, #other_amount_temp {
         position: static !important;
@@ -350,37 +378,36 @@ div[data-wpfs-amount-row="custom-amount"] {
 }
 </style>
 
-<?php 
+<?php
   global $theme_option;
   $logo = $theme_option["logo_image"];
   $logo = $logo["url"];
 ?>
 <div class="site_container">
-<?php 
+<?php
   $getID = $_GET["id"];
 ?>
 	<div class="sectionID" data-value="<?php echo $getID; ?>"></div>
- <section>
+ <section class="hed-wrap">
 	<div class="Container" id="tf-hide-mob" style="display: none;">
 
-	<?php 
-	  $pageID = get_the_id();
-	  
-	?>		
+	<?php
+      $pageID = get_the_id();
+      
+    ?>		
        <div class="menu_outer d-flex">
 
-<?php 
+<?php
       $pageID = get_the_id();
-      if($pageID != 6 && $pageID != 8 )
-      {?>
+      if ($pageID != 6 && $pageID != 8) {?>
         <div class="menu_box_one">
 
 
 
         	<div class="drift_searchForm"><?php echo get_search_form();?></div>
-        	<?php 
-        	  wp_nav_menu(array("menu" => "Top Left", "menu_class" => "menu-top-left", "menu_class" => "nav d-flex" ))
-        	?>
+        	<?php
+              wp_nav_menu(array("menu" => "Top Left", "menu_class" => "menu-top-left", "menu_class" => "nav d-flex" ))
+            ?>
 		</div>
 <?php } ?>
 
@@ -388,10 +415,9 @@ div[data-wpfs-amount-row="custom-amount"] {
             <a class="navbar-brand" href="<?php echo site_url(); ?>">
               <img src="<?php echo $logo; ?>">
             </a>         
-            <?php 
+            <?php
               $pageID = get_the_id();
-              if($pageID != 6 && $pageID != 8 )
-              {?>
+              if ($pageID != 6 && $pageID != 8) {?>
 
             <div class="navbar-header">
 	          	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar9">
@@ -406,15 +432,14 @@ div[data-wpfs-amount-row="custom-amount"] {
               }
             ?> 	       
 	        </div>
-<?php 
+<?php
       $pageID = get_the_id();
-      if($pageID != 6 && $pageID != 8 )
-      {?>
+      if ($pageID != 6 && $pageID != 8) {?>
 	        
 				<div class="menu_box_three">					
-                    <?php 
-        	            wp_nav_menu(array("menu" => "Top Right", "menu_class" => "menu-top-right", "menu_class" => "nav d-flex", 'items_wrap' => my_nav_wrap()))
-        	        ?>
+                    <?php
+                        wp_nav_menu(array("menu" => "Top Right", "menu_class" => "menu-top-right", "menu_class" => "nav d-flex", 'items_wrap' => my_nav_wrap()))
+                    ?>
 				</div>
 <?php } ?>	   
   	</div>
@@ -453,14 +478,14 @@ div[data-wpfs-amount-row="custom-amount"] {
 				</picture>
             </a> 
         </div>
-	  <?php 
-	    wp_nav_menu(array("menu" => "Navigation Menu", "menu_id" => "navigation_menu", ""));
-	  ?>
+	  <?php
+        wp_nav_menu(array("menu" => "Navigation Menu", "menu_id" => "navigation_menu", ""));
+      ?>
 	  <div class="drift_searchForm"><?php echo get_search_form();?></div>	
 	</div>
 </section>
 <header class="td-site-mobile-header" style="display: none;">
-        <div class="container">
+        <div class="container no-print">
             <div class="td-mobile-logo">
                 <a href="<?php echo home_url(); ?>">
 
@@ -489,10 +514,10 @@ div[data-wpfs-amount-row="custom-amount"] {
             <div id="myMobileNav" class="td-overlay-box">
               <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeMobileNav()">&times;</a> -->
               <div class="td-overlay-content">
-                <?php 
-                    wp_nav_menu( array(
-                        'menu' => 'Mobile Menu', 
-                    ) );
+                <?php
+                    wp_nav_menu(array(
+                        'menu' => 'Mobile Menu',
+                    ));
                 ?>
 
               </div>
