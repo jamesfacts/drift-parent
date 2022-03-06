@@ -11,6 +11,8 @@ if ($page_imageID == "") {
 }
 ?>
 
+<span id="gift-link" data-gift-url="<?php echo home_url('/gift-subscription');?>" style="visibility: hidden; display: none;"></span>
+
 <style type="text/css">
 
 	label[for='wpfs-same-billing-and-shipping-address--ZTI4NGY']:before {
@@ -61,15 +63,19 @@ if ($page_imageID == "") {
 </section>
 <script type="text/javascript">
 	jQuery(document).ready(function(){
+        let giftUrl = jQuery('#gift-link').data('gift-url');
+        let giftBtn = jQuery('<a/>', { class: 'gift-btn'}).attr({href: giftUrl}).text('Give A Gift');
+        jQuery('fieldset.wpfs-form-check-group').after(giftBtn);
 
-			jQuery("#submit--MGJjOTB").on("click", function(){
-				setTimeout(function(){
-				        if(jQuery(".wpfs-form-message--correct").is(':visible') )
-				        {
-				        	jQuery("#submit--MGJjOTB").addClass("disableButton");
-				        }
-				}, 6000);
-			});
+
+        jQuery("#submit--MGJjOTB").on("click", function(){
+            setTimeout(function(){
+                    if(jQuery(".wpfs-form-message--correct").is(':visible') )
+                    {
+                        jQuery("#submit--MGJjOTB").addClass("disableButton");
+                    }
+            }, 6000);
+        });
 		jQuery("#wpfs-card-holder-name--MGJjOTB").change(function(){
 			var full_name22 = jQuery(this).val();
 			jQuery("#wpfs-billing-name--MGJjOTB").val(full_name22);
