@@ -45,7 +45,7 @@ if ($page_imageID == "") {
 		<div class="ab_part_r donate-subscribe_txt">
 			<div class="contact01">
 				<div class="com_heading">
-					<h3><b> Subscribe </b>​<?php if ($subsitle != "") {
+					<h3><b> Give a Gift </b>​<?php if ($subsitle != "") {
                     echo "<span class='line_gray'>|</span> ".$subsitle;
                 }?> </h3>
 				</div>
@@ -62,17 +62,17 @@ if ($page_imageID == "") {
 <script type="text/javascript">
 	jQuery(document).ready(function(){
 
-        jQuery("#submit--MGJjOTB").on("click", function(){
+        jQuery("#submit--YmMxOTA").on("click", function(){
             setTimeout(function(){
                     if(jQuery(".wpfs-form-message--correct").is(':visible') )
                     {
-                        jQuery("#submit--MGJjOTB").addClass("disableButton");
+                        jQuery("#submit--YmMxOTA").addClass("disableButton");
                     }
             }, 6000);
         });
-		jQuery("#wpfs-card-holder-name--MGJjOTB").change(function(){
+		jQuery("#wpfs-card-holder-name--YmMxOTA").change(function(){
 			var full_name22 = jQuery(this).val();
-			jQuery("#wpfs-billing-name--MGJjOTB").val(full_name22);
+			jQuery("#wpfs-billing-name--YmMxOTA").val(full_name22);
 		});
 
 	jQuery('.custom_1').html('<span class="constrained">One-year print & digital</span><strong>$50</strong>');
@@ -85,32 +85,26 @@ if ($page_imageID == "") {
 
 </script>
 <style type="text/css">
-/*.page-template-subscribe .kudossubscribe form.wpfs-form fieldset.wpfs-form-check-group {
-    background: url(<?php echo $page_imageURL; ?>) !important;
-    }*/
-	#wpfs-billing-address-panel--MGJjOTB > div:last-child, #wpfs-billing-address-panel--MGJjOTB > div:nth-child(1)
+	#wpfs-billing-address-panel--YmMxOTA > div:last-child, #wpfs-billing-address-panel--YmMxOTA > div:nth-child(1)
 	{
 		display: none;
 	}
 	.kudossubscribe form .wpfs-form-actions a {
     display: none;
 }
-label[for="wpfs-card-holder-name--MGJjOTB"]::before {
+label[for="wpfs-card-holder-name--YmMxOTA"]::before {
     content: "Full name";
     font-size: 18px !important;
 }
-/*label[for="wpfs-plan--MGJjOTB--1"]::before {
-    content: "Lifetime $300";
-    font-size: 18px !important;
-}*/
-label[for="wpfs-billing-address-line-1--MGJjOTB"]::before {
+
+label[for="wpfs-billing-address-line-1--YmMxOTA"]::before {
     content: "Billing address";
     font-size: 18px !important;
 }
-label[for="wpfs-card-holder-name--MGJjOTB"], label[for="wpfs-billing-address-line-1--MGJjOTB"]{
+label[for="wpfs-card-holder-name--YmMxOTA"], label[for="wpfs-billing-address-line-1--YmMxOTA"]{
     font-size: 0px !important;
 }
-label[for='wpfs-same-billing-and-shipping-address--MGJjOTB']:before {
+label[for='wpfs-same-billing-and-shipping-address--YmMxOTA']:before {
     background: #909090 !important;
     box-shadow: none !important;
 }

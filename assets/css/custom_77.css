@@ -1061,6 +1061,7 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 }
 
  .page-template-subscribe .contact01,
+ .page-template-gift-subscribe .contact01,
  .page-template-donate .contact01,
  .page-template-about-page .contact01,
  .page-template-mentions .contact01,
@@ -1308,14 +1309,16 @@ display: none;
     margin: 15px auto 15px;
     display: block;
 }
-.page-template-subscribe .ab_part_l .wpfs-form-check-group .wpfs-form-check {
+.page-template-subscribe .ab_part_l .wpfs-form-check-group .wpfs-form-check,
+.page-template-gift-subscribe .ab_part_l .wpfs-form-check-group .wpfs-form-check {
     position: relative;
    /* z-index: 9;*/
     width: 45% !important;
     display: block;
     float: none;
 }
-.page-template-subscribe .ab_part_l .wpfs-form-check-group::after {
+.page-template-subscribe .ab_part_l .wpfs-form-check-group::after,
+.page-template-gift-subscribe .ab_part_l .wpfs-form-check-group::after {
     position: unset !important;
 
     }
@@ -1375,7 +1378,8 @@ display: none;
 
 /* radio button css*/
 
-.page-template-subscribe .kudossubscribe form.wpfs-form fieldset.wpfs-form-check-group {
+.page-template-subscribe .kudossubscribe form.wpfs-form fieldset.wpfs-form-check-group,
+.page-template-gift-subscribe .kudossubscribe form.wpfs-form fieldset.wpfs-form-check-group {
     background: url("https://www.thedriftmag.com/wp-content/uploads/2021/09/cherimoya-subscribe.jpg");
     width: 100%;
     height: auto;
@@ -1387,7 +1391,8 @@ display: none;
     padding: 15px 0px;
 }
 
-.page-template-subscribe .kudossubscribe .wpfs-form-check-input[type="radio"] + .wpfs-form-check-label::after {
+.page-template-subscribe .kudossubscribe .wpfs-form-check-input[type="radio"] + .wpfs-form-check-label::after,
+.page-template-gift-subscribe .kudossubscribe .wpfs-form-check-input[type="radio"] + .wpfs-form-check-label::after {
     background: #000 !important;
     top: 5px !important;
     left: 4px !important;
@@ -1395,10 +1400,23 @@ display: none;
     height: 12px !important;
     border: 0px;
 }
-.page-template-subscribe .kudossubscribe .wpfs-form-check-input + .wpfs-form-check-label::before{    height: 20px !important;}
-.page-template-subscribe .kudossubscribe .wpfs-form-check-group .wpfs-form-check .wpfs-form-check-label{ display: inline-block; padding-left: 50px;font-size: 20px;
-    }
-.page-template-subscribe .ab_part_l .wpfs-form-check-group .wpfs-form-check{    width: 100% !important; max-width: 300px; padding: 0 15px;}
+.page-template-subscribe .kudossubscribe .wpfs-form-check-input + .wpfs-form-check-label::before,
+.page-template-gift-subscribe .kudossubscribe .wpfs-form-check-input + .wpfs-form-check-label::before {
+    height: 20px !important;
+}
+
+.page-template-subscribe .kudossubscribe .wpfs-form-check-group .wpfs-form-check .wpfs-form-check-label,
+.page-template-gift-subscribe .kudossubscribe .wpfs-form-check-group .wpfs-form-check .wpfs-form-check-label {
+    display: inline-block;
+    padding-left: 50px;
+    font-size: 20px;
+}
+.page-template-subscribe .ab_part_l .wpfs-form-check-group .wpfs-form-check,
+.page-template-gift-subscribe .ab_part_l .wpfs-form-check-group .wpfs-form-check {
+    width: 100% !important;
+    max-width: 300px;
+    padding: 0 15px;
+}
 .page-template-subscribe .kudossubscribe .wpfs-form-check .wpfs-form-check-label strong {
     margin-left: 20px;font-size: 20px !important;
     }
