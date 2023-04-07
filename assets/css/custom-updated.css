@@ -1,3 +1,14 @@
+/* Pea Changes 8/25/2022 */
+
+/* Self-Hosted Google Fonts not picking up roboto */
+.page-template-mentions .about_r h4 {
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+    margin: 0 0 60px;
+    font-weight: 100 !important;
+}
+
 /* James Changes */
 
 .event-heading {
@@ -10,7 +21,7 @@
     position: absolute;
     height: 1px;
     width: 1px;
-    clip: rect(1px 1px 1px 1px); // IE 6 and 7
+    clip: rect(1px 1px 1px 1px);
     clip: rect(1px,1px,1px,1px);
     clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
     -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
@@ -100,10 +111,16 @@ form.search-form {
   font-family: proxy-nova;
   src: url(../font/proxy/proxy.ttf);
 }
-@font-face {
+/* @font-face {
   font-family: savoy;
   src: url(../font/savoy.ttf);
 }
+
+@font-face {
+    font-family: savoy-bold, savoy;
+    src: url(../font/savoy-bold.ttf);
+} */
+
 @font-face {
   font-family: franklin-gothic;
   src: url(../font/franklin-gothic.ttf);
@@ -137,10 +154,6 @@ form.search-form {
   src: url(../font/Avenir-Book.ttf);
 }
 @font-face {
-  font-family: Avenir-Book;
-  src: url(../font/Avenir-Book.ttf);
-}
-@font-face {
   font-family: Avenir-Thin;
   src: url(../font/avenir_thin.ttf);
 }
@@ -148,10 +161,107 @@ form.search-form {
   font-family: Avenir-Next-Thin;
   src: url(../font/avenir-next-thin.ttf);
 }
+
 @font-face {
-  font-family: savoy-bold, savoy;
-  src: url(../font/savoy -bold.ttf);
+    font-family: 'EB Garamond';
+    src: url('../font/EBGaramond/EBGaramond-Regular.woff2') format('woff2'),
+        url('../font/EBGaramond/EBGaramond-Regular.woff') format('woff'),
+        url('../font/EBGaramond/EBGaramond-Regular.svg#EBGaramond-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../font/EBGaramond/EBGaramond-Italic.woff2') format('woff2'),
+        url('../font/EBGaramond/EBGaramond-Italic.woff') format('woff'),
+        url('../font/EBGaramond/EBGaramond-Italic.svg#EBGaramond-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EB Garamond Bold';
+    src: url('../font/EBGaramond/EBGaramond-Bold.woff2') format('woff2'),
+        url('../font/EBGaramond/EBGaramond-Bold.woff') format('woff'),
+        url('../font/EBGaramond/EBGaramond-Bold.svg#EBGaramond-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EB Garamond Bold';
+    src: url('../font/EBGaramond/EBGaramond-BoldItalic.woff2') format('woff2'),
+        url('../font/EBGaramond/EBGaramond-BoldItalic.woff') format('woff'),
+        url('../font/EBGaramond/EBGaramond-BoldItalic.svg#EBGaramond-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../font/LibreFranklin/LibreFranklin-Thin.woff2') format('woff2'),
+        url('../font/LibreFranklin/LibreFranklin-Thin.woff') format('woff'),
+        url('../font/LibreFranklin/LibreFranklin-Thin.svg#LibreFranklin-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../font/LibreFranklin/LibreFranklin-Thin.woff2') format('woff2'),
+        url('../font/LibreFranklin/LibreFranklin-ThinItalic.woff') format('woff'),
+        url('../font/EBGaramond//LibreFranklin/LibreFranklin-ThinItalic.svg#LibreFranklin-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Savoy';
+    src: url('../font/Savoy/Savoy-Regular.woff') format('woff'),
+        url('../font/Savoy/Savoy-Regular.woff.svg#Savoy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Savoy-Bold';
+    src: url('../font/Savoy/SavoyBold.woff2') format('woff2'),
+        url('../font/Savoy/SavoyBold.woff') format('woff'),
+        url('../font/Savoy/SavoyBold.woff.svg#Savoy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat/Montserrat-Thin.woff2') format('woff2'),
+        url('../font/Montserrat/Montserrat-Thin.woff') format('woff'),
+        url('../font/Montserrat/Montserrat-Thin.svg#Montserrat-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Thin Italic'), local('Montserrat-ThinItalic'),
+        url('../font/Montserrat-ThinItalic.woff2') format('woff2'),
+        url('../font/Montserrat-ThinItalic.woff') format('woff'),
+        url('../font/Montserrat-ThinItalic.svg#Montserrat-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
 
 :root{
     --white:#fff;
@@ -159,6 +269,11 @@ form.search-form {
     --back-color:#0067B8;
     --primary-color:#ffd98e;
     --gray: #303030;
+    --color__field-border: #909090;
+    --color__field-background: #f6f6f6;
+    --color__highlight: #0e90cc;
+    --color__gray-field: #f6f6f6;
+    --link-hover-font-color: var(  --color__highlight );
 }
 
 body {
@@ -456,13 +571,15 @@ input[type="email"].wpfs-form-control, input[type="text"].wpfs-form-control, .wp
 }
 .home_mentions ul li {
     float: left;
-    font-family: savoy;
+    /* font-family: savoy; */
+    font-family: 'Savoy', 'EB Garamond', Times, serif;
     font-size: 20px;
     margin-bottom: 10px;
     position: relative;
 }
 .home_mentions ul li a {
-    font-family: savoy;
+    /* font-family: savoy; */
+    font-family: 'Savoy', 'EB Garamond', Times, serif;
     color: #333;
 }
 .issues_list_ul.row {
@@ -991,7 +1108,11 @@ input::-ms-input-placeholder { /* Microsoft Edge */
     padding-left: 15px;
     margin: 0px 0;
 }
-.wpfs-btn-primary--loader:after{display:none !important; }
+
+.wpfs-btn-primary--loader:after{
+    /** Let's not hide the loader - **/
+    /* display:none !important;  */
+}
 
 .ab_part_r{
     width: 50%;
@@ -1003,13 +1124,17 @@ input::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 .postid-2274 .com_heading h3 {
-    font-family: Savoy, serif;
+    /* font-family: savoy, serif; */
+    font-family: 'Savoy', 'EB Garamond', Times, serif;
 }
 
 .donate-subscribe_txt .com_heading h3 {
 	text-transform: none;
 }
-.com_heading h3 b {
+
+.com_heading h3 b,
+.com_heading h3 strong {
+    /** Let's add strong too **/
     font-size: 40px;
     font-weight: bold;
     font-family: Adobe-Caslon;
@@ -1228,7 +1353,8 @@ ul.social_icons li  i.fab{
     border-radius: 9px !important;
 }
 .wpfs-form-actions button.wpfs-btn {
-    margin-right: 0 !important;
+    /** Let's not reset the margin - Pea **/
+    /* margin-right: 0 !important; */
 }
 
 
@@ -1266,11 +1392,12 @@ ul.social_icons li  i.fab{
 .page-template-page-templatessubscribe-php #wpfs-form-get-parameters--ZTI4NGY ~ .wpfs-form-check-group{display: none;}
 
 .ab_part_l .wpfs-form-check-group::after{
-    display: block;
+    /* Let's not make the form inaccessible */
+    /* display: block;
     content: "";
     top: 0;left: 0;width: 100%;height: 100%;
     position: absolute;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.7); */
 }
 
 
@@ -1351,7 +1478,7 @@ display: none;
 
 /* radio button css*/
 
-.page-template-subscribe .kudossubscribe form.wpfs-form fieldset.wpfs-form-check-group {
+/* .page-template-subscribe .kudossubscribe form.wpfs-form fieldset.wpfs-form-check-group {
     background: url("https://www.thedriftmag.com/wp-content/uploads/2021/09/cherimoya-subscribe.jpg");
     width: 100%;
     height: auto;
@@ -1391,7 +1518,7 @@ display: none;
 .page-template-subscribe .kudossubscribe .wpfs-form-check-group .wpfs-form-check .wpfs-form-check-label span.constrained {
     width: 125px;
     display: inline-block;
-}
+} */
 
 /* media css*/
 
@@ -1925,7 +2052,8 @@ section.mission_outer {
     display: block;
     margin-top: 0px;
     font-weight: normal;
-    font-family: 'franklin-gothic';
+    /* font-family: 'franklin-gothic'; */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif;
     font-size: 18px;
     text-transform: uppercase;
 }
@@ -2061,7 +2189,8 @@ section.mission_outer {
 }
 
 .postid-2274 .ab_part_img p.caption {
-    font-family: Savoy, serif;
+    /* font-family: savoy, serif; */
+    font-family: 'Savoy', 'EB Garamond', Times, serif;
 }
 
 .issue_outer .issue_l {
@@ -2145,7 +2274,8 @@ section.mission_outer {
     text-transform: capitalize;
 }
 .search-term-list .list-feature-info h3 a {
-    font-family: 'franklin-gothic';
+    /* font-family: 'franklin-gothic'; */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 18px;
@@ -2209,7 +2339,8 @@ section.mission_outer {
     color: inherit;
 }
 .about_edtitor b {
-    font-family: 'franklin-gothic' !important;
+    /* font-family: 'franklin-gothic' !important; */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif !important;
 }
 .share_text_container p strong {
     font-family: inherit !important;
@@ -2272,9 +2403,9 @@ section.mission_outer {
     background: #fff;
     top: 0;
 }
-.mission_inner_body > :last-child::after { /* || after last child in post body */
+.mission_inner_body > :last-child::after {
     content: "||";
-    color: #69A7C2; /* fallback color: generally color is set by issue */
+    color: #69A7C2;
     font-weight: bold;
     position: relative;
     left: 5px;
@@ -2476,14 +2607,16 @@ label[for="wpfs-same-billing-and-shipping-address--ZTI4NGY"] {
 }
 
 .article_editor a {
-    font-family: 'franklin-gothic';
+    /* font-family: 'franklin-gothic'; */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif;
     text-transform: uppercase;
     font-weight: normal;
 }
 .single-mention .contact01 p {
     line-height: 1.4em;
     font-size: 16px;
-    font-family: 'franklin-gothic';
+    /* font-family: 'franklin-gothic'; */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif;
     font-weight: normal;
 }
 div.asl_r.vertical {
@@ -2540,7 +2673,8 @@ div.asl_w .probox .promagnifier .innericon svg {
 }
 
 .arti_sub_heading a {
-    font-family: 'franklin-gothic';
+    /* font-family: 'franklin-gothic'; */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif;
     font-weight: normal;
     font-size: 18px;
     text-transform: uppercase;
@@ -2586,8 +2720,9 @@ div.asl_w .probox .promagnifier .innericon svg {
 }
 .single-post .mission b,
 .single-post .mission strong {
-    font-family: savoy-bold;
-    font-weight: bold;
+    /* font-family: savoy; */
+    font-family: 'Savoy-Bold', 'EB Garamond Bold', Times, serif;
+    /* font-weight: bold; */
 }
 .wp-pagenavi {
     text-align: center;
@@ -2606,13 +2741,14 @@ div.asl_w .probox .promagnifier .innericon svg {
 
 
 .single-post .article_editor p {
-    font-family: franklin-gothic;
+    /* font-family: franklin-gothic; */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif;
     text-transform: uppercase;
     padding-top: 50px;
 }
-.single-post .article_editor p b
- {
-    font-family: 'franklin-gothic';
+.single-post .article_editor p b {
+    /* font-family: 'franklin-gothic'; */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif;
     text-transform: uppercase;
 }
 .search-term-list .list-feature-info {
@@ -3868,7 +4004,12 @@ h1.issue_heading span { 	/* ============= ADDED 5/28 ========= */
 .signup4mail_Right #mc_embed_signup .mc-field-group input#mce-EMAIL:-webkit-autofill:active  {
     transition: background-color 5000s ease-in-out 0s;
 }
-.page-template-mentions .men_content p, .page-template-mentions .ab_part_mobile p{font-family:'franklin-gothic'; font-size: 18px}
+.page-template-mentions .men_content p, 
+.page-template-mentions .ab_part_mobile p{
+    /* font-family:'franklin-gothic';  */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif;
+    font-size: 18px
+}
 .page-template-mentions .ab_part_mobile, .page-template-mentions .about_l span.subtitle-mention{display:none;}
 .page-template-mentions .about_l{text-align:right}
 
@@ -4085,7 +4226,8 @@ h1.issue_heading b{
 
 /* 515 Media changes */
 .page-template-issues .com_heading01 h4 + .authors a {
-    font-family: 'franklin-gothic';
+    /* font-family: 'franklin-gothic'; */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: normal;
@@ -4095,7 +4237,8 @@ h1.issue_heading b{
 .page-template-issues .com_heading01 h4 + .authors a:after {content:", ";margin-right:7px;}
 .page-template-issues .com_heading01 h4 + .authors a:last-child:after {content:none;}
 .single-issue .com_heading01 h4 + .authors a {
-    font-family: 'franklin-gothic';
+    /* font-family: 'franklin-gothic'; */
+    font-family: 'franklin-gothic', 'Libre Franklin', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: normal;
@@ -4170,7 +4313,8 @@ h1.issue_heading b{
 .moreissue_right.postid-2274 .mr-subtitle,
 .page-template-latest_articles .postid-2274 a.subtitle,
 body.home .postid-2274 .arti_heading h4 a {
-    font-family: Savoy, serif;
+    /* font-family: savoy, serif; */
+    font-family: 'Savoy', 'EB Garamond', Times, serif;
 }
 
 .poem-pad {
@@ -4195,4 +4339,251 @@ body.home .postid-2274 .arti_heading h4 a {
     .poem-pad {
         padding-left: 160px;
     }
+}
+
+
+/* New form styling */
+
+.wpfs-same-billing-and-shipping-address + .wpfs-form-check-label::before {}
+
+label[for^="wpfs-same-billing-and-shipping-address"]:before,
+.wpfs-form-check-input + label[for^="wpfs-same-billing-and-shipping-address"]::before {
+    border: 1px solid var( --color__field-border ) !important;
+}
+
+.wpfs-form-check-input[type="checkbox"]:checked + label[for^="wpfs-same-billing-and-shipping-address"]::before {
+    background-color: var( --color__field-border ) !important;
+}
+
+/** Product Selection **/
+form.wpfs-form fieldset.wpfs-form-check-group {
+    background-color: var( --color__field-background );
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 30px;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    /* background-size: 100% !important;
+    background-position: center top !important; */
+    /* padding: 15px 0px; */
+}
+
+.page-template-subscribe form.wpfs-form fieldset.wpfs-form-check-group,
+.page-subscribe form.wpfs-form fieldset.wpfs-form-check-group {
+    background-image: url("https://www.thedriftmag.com/wp-content/uploads/2021/09/cherimoya-subscribe.jpg");
+}
+
+.page-template-donate form.wpfs-form fieldset.wpfs-form-check-group,
+.page-donate form.wpfs-form fieldset.wpfs-form-check-group {
+    background-image: url(../images/donate-box-bg.png);
+}
+
+.page-template-donate form.wpfs-form fieldset.wpfs-form-check-group label,
+.page-template-donate form.wpfs-form fieldset.wpfs-form-check-group label strong {
+    color: var( --white );
+}
+
+.page-template-donate form.wpfs-form fieldset.wpfs-form-check-group .constrained {
+    display: none !important;
+}
+
+/* Radio Buttons */
+.wpfs-form-check-input[type="radio"] + .wpfs-form-check-label::after {
+    background: #000 !important;
+    top: 5px !important;
+    left: 4px !important;
+    width: 12px !important;
+    height: 12px !important;
+    border: 0px;
+}
+
+.page-template-donate .wpfs-form-check-group .wpfs-form-check .wpfs-form-check-label {
+    padding-left: 1rem;
+}
+
+.wpfs-form-check-input+.wpfs-form-check-label::before {
+    height: 20px !important;
+}
+
+.wpfs-form-check-group .wpfs-form-check .wpfs-form-check-label {
+    display: inline-block;
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+.page-template-subscribe .ab_part_l .wpfs-form-check-group .wpfs-form-check {
+    width: 100% !important;
+    max-width: 300px;
+    padding: 0 15px;
+}
+
+.wpfs-form-check .wpfs-form-check-label strong {
+    margin-left: 20px;
+    font-size: 20px !important;
+}
+
+.wpfs-form-check .wpfs-form-check-label:focus {
+    outline: none;
+}
+
+form.wpfs-form {
+    padding-top: 6px !important;
+    z-index: 0;
+}
+
+.wpfs-form-check .wpfs-form-check-label:focus:after {
+    outline: none;
+}
+
+.wpfs-form-check>input:focus {
+    outline: none;
+}
+
+.wpfs-form-check-input[type="radio"]:focus + .wpfs-form-check-label:before,
+.wpfs-form-check-input[type="radio"]:checked:focus + .wpfs-form-check-label:before {
+    outline: none;
+    box-shadow: none;
+}
+
+.wpfs-form-check .wpfs-form-check-label {
+    padding-left: 30px;
+}
+
+.wpfs-form-check-group .wpfs-form-check .wpfs-form-check-label span.constrained {
+    width: 125px;
+    display: inline-block;
+}
+
+.wpfs-form-check-group .wpfs-form-check .wpfs-form-check-label {
+    display: inline-block;
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+div[data-wpfs-amount-row="custom-amount"] {
+    display: initial !important;
+}
+
+/** Donation Form Styling - Pea **/
+.page-template-donate .wpfs-form-check-group .wpfs-form-check input, 
+.page-donate .wpfs-form-check-group .wpfs-form-check input {
+    margin-bottom: 0 !important;
+}
+
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper,
+.page-donate .wpfs-form-check-group .fieldset-wrapper {
+    width: 100%;
+    max-width: 75%;
+    margin: 1rem auto;
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check,
+.page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check {
+    margin: .5rem 0;
+    width: 100%;
+}
+
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:nth-child(odd),
+.page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:nth-child(odd),
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:last-of-type,
+.page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:last-of-type,
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:nth-child(7),
+.page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:nth-child(7),
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"],
+.page-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"] {
+    width: 100%;
+}
+
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"],
+.page-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"] {
+    /* margin-left: 35%; */
+    max-width: 100% !important;
+    width: 65%;
+}
+
+.page-template-donate .wpfs-form-check-group label[for^="wpfs-custom-amount"] {
+    text-transform: capitalize;
+}
+
+@media screen and ( min-width: 495px ) {
+    .page-template-donate .wpfs-form-check-group .fieldset-wrapper,
+    .page-donate .wpfs-form-check-group .fieldset-wrapper {
+        margin: 25% auto 1rem auto;
+    }
+
+    .page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check,
+    .page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check {
+        margin: .5rem 0;
+        width: 35%;
+    }
+
+    .page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:nth-child(odd),
+    .page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:nth-child(odd),
+    .page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:last-of-type,
+    .page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:last-of-type,
+    .page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:nth-child(7),
+    .page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:nth-child(7),
+    .page-template-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"],
+    .page-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"] {
+        width: 65%;
+    }
+
+    .page-template-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"],
+    .page-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"] {
+        margin-left: 35%;
+    }
+}
+
+@media screen and ( min-width: 580px ) and ( max-width: 767px ) {
+    .page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:last-of-type,
+    .page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:last-of-type,
+    .page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:nth-child(7),
+    .page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-form-check:nth-child(7) {
+        width: 25%;
+    }
+
+    .page-template-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"],
+    .page-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"] {
+        width: 40%;
+        /* max-width: 20%; */
+        margin: .5rem 0;
+    }
+}
+
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"]  .wpfs-input-group,
+.page-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"] .wpfs-input-group {
+    display: block;
+}
+
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"]  .wpfs-input-group input,
+.page-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"] .wpfs-input-group input {
+    width: 100%;
+}
+
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"] input,
+.page-donate .wpfs-form-check-group .fieldset-wrapper div[data-wpfs-amount-row="custom-amount"] input {
+    border: 1px solid var( --color__field-border );
+    height: 29px;
+    border-radius: 0 !important;
+    padding: 0 .25rem;
+}
+
+.page-template-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-input-group-prepend,
+.page-donate .wpfs-form-check-group .fieldset-wrapper .wpfs-input-group-prepend {
+    display: none !important;
+}
+
+.page-template-donate input.wpfs-form-control,
+.page-donate input.wpfs-form-control {
+    border-color: var( --color__gray-field ) !important;
+}
+
+form .wpfs-btn-link,
+form .wpfs-btn-link:visited {
+    color: var( --color__highlight );
 }
